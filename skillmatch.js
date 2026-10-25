@@ -42,3 +42,15 @@ class Vaga {
         this.cargo = cargo;
         this.requisitos = requisitos;
     }
+  }
+
+  // Classes, herança e This.----------------
+
+  class Vaga {
+    constructor(id, nomeDaEmpresa, cargo, requisitos) {
+        this.id = id;
+        this.nomeDaEmpresa = nomeDaEmpresa;
+        this.cargo = cargo;
+        this.requisitos = requisitos;
+    }
+  }
