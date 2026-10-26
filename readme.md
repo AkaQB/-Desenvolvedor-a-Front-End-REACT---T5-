@@ -18,12 +18,10 @@ No final, ele diz qual é a vaga mais compatível comigo e o que eu devo estudar
 
 -------------------Como executar-----------------
 
-Precisa ter o Node.js instalado. Depois é só abrir a pasta do projeto no terminal e rodar:
+Precisa ter o Node.js instalado. Depois é só abrir a pasta do projeto no terminal e rodar na terminal:
 
 node skillmatch.js
-Arquivos
-skillmatch.js: todo o código do projeto
-README.md: este arquivo
+
 Como o programa funciona
 Eu criei um objeto com os meus dados (nome, área de interesse, experiência e habilidades) e um array com 3 vagas.
 A função principal simula a busca das vagas em um servidor, usando uma Promise com setTimeout e async/await. Se der erro, o try/catch mostra uma mensagem.

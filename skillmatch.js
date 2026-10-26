@@ -117,7 +117,7 @@ function encontrarMelhorVaga(resultados) {
  
 // RF07: Recomendação de estudo
 // Critério: as habilidades que faltam na vaga MAIS compatível são as prioritárias,
-// pois é a vaga que o candidato está mais perto de conquistar.
+// pois é a vaga que o candidato está mais perto de obter.
 function gerarRecomendacaoEstudo(faltantes) {
     if (faltantes.length === 0) {
         return "Parabéns! Você possui todas as habilidades necessárias.";
