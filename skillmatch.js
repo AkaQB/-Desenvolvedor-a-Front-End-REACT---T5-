@@ -15,7 +15,7 @@ const candidato = {
     habilidades: ["HTML5", "CSS3", "JavaScript", "Git", "GitHub", "React", "Node.js"]
 };
  
-// RF02: Array de vagas (dados que "estão no servidor")
+// RF02: Array de vagas (dados que estão no servidor)
 const dadosVagas = [
     {
         id: 1,
@@ -46,7 +46,7 @@ class Vaga {
         this.requisitos = requisitos;
     }
  
-    // RF11: método que usa 'this'
+    // RF11: método que usa this
     obterResumo() {
         return `${this.cargo} na empresa ${this.nomeDaEmpresa} (${this.requisitos.length} requisitos)`;
     }
@@ -132,7 +132,7 @@ function exibirRelatorio(resultados, aoFinalizar) {
         const numeroAnalise = incrementarAnalise();
         const faltantes = resultado.faltantes.length === 0 ? "nenhuma" : resultado.faltantes.join(", ");
  
-        console.log(`\nAnálise nº ${numeroAnalise}`);
+        console.log(`Análise nº ${numeroAnalise}`);
         console.log(resultado.vaga.obterResumo());
         console.log(`Compatibilidade: ${resultado.percentual}% (${classificarCompatibilidade(resultado.percentual)})`);
         console.log(`Habilidades atendidas: ${resultado.atendidas.join(", ")}`);
@@ -150,13 +150,13 @@ async function executarSkillMatch() {
         console.log(`Habilidades: ${candidato.habilidades.join(", ")}`);
  
         const vagas = await buscarVagasNoServidor();
-        console.log(`\n${vagas.length} vagas encontradas. Analisando compatibilidade...`);
+        console.log(`${vagas.length} vagas encontradas. Analisando compatibilidade...`);
  
         const resultados = vagas.map((vaga) => analisarCompatibilidade(candidato, vaga));
  
         exibirRelatorio(resultados, () => {
             const melhor = encontrarMelhorVaga(resultados);
-            console.log("\ VAGA MAIS COMPATÍVEL");
+            console.log(" VAGA MAIS COMPATÍVEL");
             console.log(melhor.vaga.obterResumo());
             console.log(`Compatibilidade: ${melhor.percentual}%`);
             console.log(gerarRecomendacaoEstudo(melhor.faltantes));
